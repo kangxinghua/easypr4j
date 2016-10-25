@@ -24,34 +24,6 @@
     </properties>
 
     <!-- 设定插件仓库, 如有Nexus私服, 取消注释并指向正确的服务器地址.-->
-    <!--<pluginRepositories>-->
-        <!--<pluginRepository>-->
-            <!--<id>local_nexus</id>-->
-            <!--<name>local_nexus</name>-->
-            <!--<url>http://192.168.0.81:8081/nexus/content/groups/public/</url>-->
-            <!--<releases>-->
-                <!--<enabled>true</enabled>-->
-            <!--</releases>-->
-            <!--<snapshots>-->
-                <!--<enabled>true</enabled>-->
-            <!--</snapshots>-->
-        <!--</pluginRepository>-->
-    <!--</pluginRepositories>-->
-
-    <!--<repositories>-->
-        <!--<repository>-->
-            <!--<id>local_nexus</id>-->
-            <!--<name>local_nexus</name>-->
-            <!--<url>http://192.168.0.81:8081/nexus/content/groups/public/</url>-->
-            <!--<releases>-->
-                <!--<enabled>true</enabled>-->
-            <!--</releases>-->
-            <!--<snapshots>-->
-                <!--<enabled>true</enabled>-->
-            <!--</snapshots>-->
-        <!--</repository>-->
-    <!--</repositories>-->
-
     <pluginRepositories>
         <pluginRepository>
             <id>aliyun _nexus</id>
@@ -142,19 +114,19 @@
             <classifier>${classifier.arch}</classifier>
         </dependency>
         <!-- javacv end -->
-        <!--&lt;!&ndash; ffmpeg  begin &ndash;&gt;-->
-        <!--<dependency>-->
-            <!--<groupId>org.bytedeco.javacpp-presets</groupId>-->
-            <!--<artifactId>ffmpeg</artifactId>-->
-            <!--<version>${ffmpeg.version}</version>-->
-        <!--</dependency>-->
-        <!--<dependency>-->
-            <!--<groupId>org.bytedeco.javacpp-presets</groupId>-->
-            <!--<artifactId>ffmpeg</artifactId>-->
-            <!--<version>${ffmpeg.version}</version>-->
-            <!--<classifier>${classifier.arch}</classifier>-->
-        <!--</dependency>-->
-        <!--&lt;!&ndash; ffmpeg  end &ndash;&gt;-->
+        <!-- ffmpeg  begin -->
+        <dependency>
+            <groupId>org.bytedeco.javacpp-presets</groupId>
+            <artifactId>ffmpeg</artifactId>
+            <version>${ffmpeg.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.bytedeco.javacpp-presets</groupId>
+            <artifactId>ffmpeg</artifactId>
+            <version>${ffmpeg.version}</version>
+            <classifier>${classifier.arch}</classifier>
+        </dependency>
+        <!-- ffmpeg  end -->
     </dependencies>
     <build>
         <plugins>
